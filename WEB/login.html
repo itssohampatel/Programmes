@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<center>
+		<form onsubmit="return false">
+			<h1>FORM</h1>
+			<span>NAME:-</span>
+			<input type="username" name="username" id="name" placeholder="username">
+			<br/>
+			<br/>
+			<span>USERNAME:-</span>
+			<input type="password" name="password" id="pass" placeholder="password">
+			<br/>
+			<br/>
+			<input type="submit" value="GO!" id="bt_submit" >
+			<!-- <p id="us" ></p> -->
+			
+		</form>
+	</center>
+</body>
+<script type="text/javascript">
+// code for don't refresh page while transfer data from form to php page 
+	$('#bt_submit').click(function(){
+		var name = $('#name').val();
+		var pass = $('#pass').val();
+		var postdata = 'username='+name+'&password='+pass;
+		$.ajax({
+			url : "for.php",
+			type : "POST",
+			data : postdata,
+			success: function(data,status){
+				$('#name').val('');
+				$('#pass').val('');
+				console.log(status);
+			}
+		});
+	});
+	
+</script> 
+</html>
+
+<!-- function show() {
+		var nm = $('#name').val();
+		var ps = document.getElementById('pass').value;
+		console.log(nm);
+		console.log(ps);
+	 } -->
