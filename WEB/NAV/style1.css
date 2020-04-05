@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap');
+
+*{
+	background-color: #24252a;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+li, a, button {
+	font-family: 'Archivo', sans-serif;
+	font-weight: 500;
+	font-size:16px;
+	color:#edf0f1;
+	text-decoration: none;
+}
+.logo{
+	/*margin-right: auto; // 2nd
+	margin-left:auto; //3rd*/
+	width: 10%;
+	height: 10%;
+	/*order: 3; //3rd*/
+	cursor: pointer;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	/*justify-content: flex-end; // 2nd & 3rd*/
+	align-items: center;
+	padding: 30px 10%;
+}
+/*nav{
+	order:1; // 3rd
+}*/
+.nlinks{
+	list-style: none;
+}
+
+.nlinks li{
+	display: inline-block;
+	padding: 0px 20px;
+}
+/*.nlinks li{
+	display: inline-block;
+	padding: 0px 20px; // 3rd
+}
+*/
+.nlinks li a{
+	transition: all 0.3s ease 0s;
+}
+
+.nlinks li a:hover {
+	color: #0088a9;
+}
+/*.contact{
+	order: 2; // 3rd
+}*/
+
+button{
+	/*margin-left: 20px; // 2nd & 3rd*/
+	padding: 9px 25px;
+	background-color: rgba(0,136,169,1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+ button:hover{
+ 	background-color: rgba(0,136,169,0.8);
+ }
